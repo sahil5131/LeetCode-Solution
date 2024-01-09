@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def leafFinder(self, root: Optional[TreeNode], leaf_value):
+    def leafFinder(self, root: Optional[TreeNode], leaf_value: []):
         if not root:
             return 
         if(not root.left and not root.right):
