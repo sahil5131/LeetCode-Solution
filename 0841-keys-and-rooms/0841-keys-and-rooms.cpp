@@ -4,8 +4,8 @@ public:
     void dfs(int i, set<int>& keys, vector<vector<int>>& rooms, vector<int>& vis){
         vis[i]=1;
         for(auto it: rooms[i]){
-            keys.insert(it);
             if(vis[it]==0){
+                keys.insert(it);
                 dfs(it, keys, rooms, vis);
             }
         }
