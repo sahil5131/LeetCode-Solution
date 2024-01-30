@@ -3,9 +3,7 @@ class Solution:
         n = len(tokens)
         stack = []
         for i in range(n):
-            if not len(stack):
-                stack.append(int(tokens[i]))
-            elif tokens[i]=='+' or tokens[i]=='-' or tokens[i]=='*' or tokens[i]=='/':
+            if tokens[i]=='+' or tokens[i]=='-' or tokens[i]=='*' or tokens[i]=='/':
                 a = stack.pop()
                 b = stack.pop()
                 if tokens[i]=='+':
