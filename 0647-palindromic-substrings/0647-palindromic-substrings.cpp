@@ -1,12 +1,13 @@
 class Solution {
 public:
 
-    bool checkPalindrome(string s){
-        int n=s.size();
-        for(int i=0; i<n/2; i++){
-            if(s[i]!=s[n-i-1]){
+    bool checkPalindrome(int i, int j, string s){
+        while(i<j){
+            if(s[i]!=s[j]){
                 return false;
             }
+            i++;
+            j--;
         }
         return true;
     }
@@ -17,10 +18,10 @@ public:
         int n=s.size();
         int ans=0;
         for(int i=0; i<n; i++){
-            string tmp="";
+            
             for(int j=i; j<n; j++){
-                tmp+=s[j];
-                if(checkPalindrome(tmp)){
+               
+                if(checkPalindrome(i, j, s)){
                     ans++;
                 }
             }
